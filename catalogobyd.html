@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catálogo BYD | Dahruj</title>
+<title>Catálogo BYD | Dahruj Ceasa</title>
 
 <style>
 :root{
@@ -35,7 +35,6 @@ header{
   border-radius:6px;
   text-decoration:none;
   font-weight:bold;
-  cursor:pointer;
 }
 
 /* BOTÃO VOLTAR */
@@ -46,7 +45,7 @@ header{
 }
 .btn-voltar{
   display:inline-block;
-  background:#0b2a4a;
+  background:var(--azul);
   color:#fff;
   padding:10px 16px;
   border-radius:6px;
@@ -108,7 +107,6 @@ header{
   text-decoration:none;
   font-weight:bold;
   font-size:.9rem;
-  cursor:pointer;
 }
 
 /* WHATSAPP FLOAT */
@@ -124,7 +122,6 @@ header{
   align-items:center;
   justify-content:center;
   box-shadow:0 4px 12px rgba(0,0,0,.25);
-  cursor:pointer;
   z-index:999;
 }
 .whatsapp-icon{
@@ -139,11 +136,10 @@ header{
 <header>
   <a href="index.html">
     <img src="https://res.cloudinary.com/dny3p8nig/image/upload/logo-byd_sig5ob"
-         alt="BYD Dahruj Ceasa" class="logo-byd">
+         alt="BYD Dahruj Ceasa"
+         class="logo-byd">
   </a>
-  <a class="cta-topo" onclick="falarWhats('BYD Dahruj Ceasa')">
-    Falar com Consultor
-  </a>
+  <a class="cta-topo" onclick="falarWhats('Catálogo BYD')">Falar com Consultor</a>
 </header>
 
 <div class="voltar-container">
@@ -152,11 +148,12 @@ header{
 
 <section class="hero">
   <h2>Catálogo BYD</h2>
-  <p>Elétricos premium com procedência garantida</p>
+  <p>Elétricos e híbridos com procedência garantida</p>
 </section>
 
 <section class="catalogo">
 
+  <!-- ELÉTRICOS -->
   <div class="card">
     <a href="dolphin.html">
       <img src="https://res.cloudinary.com/dny3p8nig/image/upload/queijo_yellow_xbrl6o">
@@ -172,7 +169,7 @@ header{
       <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_iba9aj">
     </a>
     <div class="card-body">
-      <h3>BYD Dolphin Mini 5 Lugares 2026</h3>
+      <h3>Dolphin Mini 5 Lugares 2026</h3>
       <a class="btn" onclick="falarWhats('BYD Dolphin Mini 5 Lugares 2026')">Tenho Interesse</a>
     </div>
   </div>
@@ -217,10 +214,30 @@ header{
     </div>
   </div>
 
+  <div class="card">
+    <a href="atto8.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/foto890_45090_qgmphw">
+    </a>
+    <div class="card-body">
+      <h3>BYD ATTO 8</h3>
+      <a class="btn" onclick="falarWhats('BYD ATTO 8')">Tenho Interesse</a>
+    </div>
+  </div>
+
+  <!-- HÍBRIDO -->
+  <div class="card">
+    <a href="shark-gs.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_zh5seu">
+    </a>
+    <div class="card-body">
+      <h3>BYD Shark GS (Híbrido)</h3>
+      <a class="btn" onclick="falarWhats('BYD Shark GS')">Tenho Interesse</a>
+    </div>
+  </div>
+
 </section>
 
-<!-- WHATSAPP -->
-<a class="whatsapp-float" onclick="falarWhats('Site Dahruj Ceasa')">
+<a class="whatsapp-float" onclick="falarWhats('Catálogo BYD')">
   <img src="https://res.cloudinary.com/dny3p8nig/image/upload/whatsapp_krknit"
        alt="WhatsApp"
        class="whatsapp-icon">

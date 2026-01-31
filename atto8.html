@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BYD ATTO 8 | Dahruj Ceasa</title>
+
+<style>
+:root{
+  --azul:#0b2a4a;
+  --verde:#25d366;
+  --cinza:#f4f4f4;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:var(--cinza);color:#333}
+
+/* HEADER */
+header{
+  background:#fff;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+header img{height:38px;cursor:pointer}
+header a{
+  background:var(--azul);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(11,42,74,.85),rgba(11,42,74,.85)),
+  url("https://res.cloudinary.com/dny3p8nig/image/upload/foto890_45090_qgmphw") center/cover;
+  color:#fff;
+  padding:70px 20px;
+  text-align:center;
+}
+.hero h2{font-size:2rem;margin-bottom:8px}
+.hero p{font-size:1.05rem}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+/* BLOCO */
+.bloco{
+  background:#fff;
+  border-radius:12px;
+  padding:30px;
+  margin-bottom:30px;
+  box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+.bloco h3{
+  color:var(--azul);
+  margin-bottom:15px;
+}
+
+/* LISTA */
+.lista{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:10px;
+}
+.lista li{
+  list-style:none;
+  padding-left:18px;
+  position:relative;
+}
+.lista li::before{
+  content:"✔";
+  color:var(--verde);
+  position:absolute;
+  left:0;
+}
+
+/* TABELA */
+.tabela{
+  width:100%;
+  border-collapse:collapse;
+}
+.tabela td{
+  padding:10px;
+  border-bottom:1px solid #ddd;
+}
+.tabela td:first-child{
+  font-weight:bold;
+  width:45%;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:60px;
+  height:60px;
+  background:#25d366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);
+  cursor:pointer;
+  z-index:999;
+}
+.whatsapp-icon{
+  width:32px;
+  height:32px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="https://res.cloudinary.com/dny3p8nig/image/upload/logo-byd_sig5ob"
+       alt="BYD Dahruj Ceasa"
+       onclick="location.href='catalogobyd.html'">
+  <a href="catalogobyd.html">Voltar</a>
+</header>
+
+<section class="hero">
+  <h2>BYD ATTO 8</h2>
+  <p>SUV híbrido premium de alta performance</p>
+</section>
+
+<section class="container">
+
+  <!-- ITENS DE SÉRIE -->
+  <div class="bloco">
+    <h3>Itens de Série</h3>
+    <ul class="lista">
+      <li>Teto solar panorâmico</li>
+      <li>Rodas de liga leve de 21 polegadas</li>
+      <li>7 assentos</li>
+      <li>Carregamento rápido sem fio de 50 W</li>
+      <li>Iluminação ambiente imersiva com até 128 cores</li>
+    </ul>
+  </div>
+
+  <!-- MOTOR ELÉTRICO -->
+  <div class="bloco">
+    <h3>Motor Elétrico</h3>
+    <table class="tabela">
+      <tr><td>Torque</td><td>56,1 kgfm</td></tr>
+      <tr><td>Potência</td><td>488 cv</td></tr>
+      <tr><td>Autonomia elétrica</td><td>106 km</td></tr>
+      <tr><td>Bateria</td><td>35,6 kWh</td></tr>
+    </table>
+  </div>
+
+  <!-- MOTOR / PERFORMANCE -->
+  <div class="bloco">
+    <h3>Motor / Performance</h3>
+    <table class="tabela">
+      <tr><td>Motorização</td><td>1.5</td></tr>
+      <tr><td>Potência</td><td>156 cv</td></tr>
+      <tr><td>Torque</td><td>22,9 kgfm</td></tr>
+      <tr><td>0–100 km/h</td><td>4,9 s</td></tr>
+      <tr><td>Velocidade máxima</td><td>200 km/h</td></tr>
+    </table>
+  </div>
+
+  <!-- DIMENSÕES -->
+  <div class="bloco">
+    <h3>Dimensões</h3>
+    <table class="tabela">
+      <tr><td>Comprimento</td><td>5.040 mm</td></tr>
+      <tr><td>Largura</td><td>1.996 mm</td></tr>
+      <tr><td>Altura</td><td>1.760 mm</td></tr>
+      <tr><td>Entre-eixos</td><td>2.950 mm</td></tr>
+      <tr><td>Ocupantes</td><td>5</td></tr>
+      <tr><td>Tanque</td><td>60 L</td></tr>
+      <tr><td>Porta-malas</td><td>270 | 960 L</td></tr>
+    </table>
+  </div>
+
+  <!-- CHASSI -->
+  <div class="bloco">
+    <h3>Chassi / Suspensão</h3>
+    <table class="tabela">
+      <tr><td>Suspensão dianteira</td><td>Independente, braços sobrepostos</td></tr>
+      <tr><td>Suspensão traseira</td><td>Independente, multibraço</td></tr>
+      <tr><td>Pneus dianteiros</td><td>265/45 R21</td></tr>
+      <tr><td>Pneus traseiros</td><td>265/45 R21</td></tr>
+      <tr><td>Freios dianteiros</td><td>Discos ventilados</td></tr>
+      <tr><td>Freios traseiros</td><td>Discos ventilados</td></tr>
+    </table>
+  </div>
+
+</section>
+
+<!-- WHATSAPP -->
+<a class="whatsapp-float" onclick="falarWhats('BYD ATTO 8')">
+  <img src="https://res.cloudinary.com/dny3p8nig/image/upload/whatsapp_krknit"
+       alt="WhatsApp"
+       class="whatsapp-icon">
+</a>
+
+<script>
+function falarWhats(modelo){
+  const telefone = "5511947377291";
+  const mensagem =
+    `Olá! Vi o ${modelo} no catálogo do site e gostaria de saber mais sobre as condições de financiamento. Pode me ajudar?`;
+  window.open(
+    `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`,
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
