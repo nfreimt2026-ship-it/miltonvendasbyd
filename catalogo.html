@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo BYD | Dahruj Ceasa</title>
+
+<style>
+:root{
+  --azul:#0b2a4a;
+  --verde:#25d366;
+  --cinza:#f4f4f4;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:var(--cinza);color:#333}
+
+/* HEADER */
+header{
+  background:#fff;
+  padding:15px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+.logo-byd{
+  height:38px;
+  cursor:pointer;
+}
+.cta-topo{
+  background:var(--azul);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* BOTÃO VOLTAR */
+.voltar-container{
+  max-width:1200px;
+  margin:20px auto 0;
+  padding:0 20px;
+}
+.btn-voltar{
+  display:inline-block;
+  background:#0b2a4a;
+  color:#fff;
+  padding:10px 16px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* HERO */
+.hero{
+  background:var(--azul);
+  color:#fff;
+  padding:30px 20px;
+  text-align:center;
+}
+.hero h2{font-size:1.5rem;margin-bottom:6px}
+
+/* GRID */
+.catalogo{
+  max-width:1200px;
+  margin:auto;
+  padding:30px 20px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:22px;
+}
+@media(min-width:768px){
+  .catalogo{grid-template-columns:repeat(3,1fr)}
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+  transition:.3s;
+}
+.card:hover{transform:translateY(-4px)}
+.card img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+}
+.card-body{
+  padding:14px;
+  text-align:center;
+}
+.card-body h3{
+  font-size:1rem;
+  color:var(--azul);
+  margin-bottom:12px;
+}
+.btn{
+  display:block;
+  background:var(--verde);
+  color:#fff;
+  padding:11px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:.9rem;
+  cursor:pointer;
+}
+
+/* WHATSAPP FIXO */
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:var(--verde);
+  color:#fff;
+  padding:14px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">
+    <img src="https://res.cloudinary.com/dny3p8nig/image/upload/logo-byd_sig5ob"
+         alt="BYD Dahruj Ceasa" class="logo-byd">
+  </a>
+  <a class="cta-topo" onclick="falarWhats('BYD Dahruj Ceasa')">
+    Falar com Consultor
+  </a>
+</header>
+
+<div class="voltar-container">
+  <a href="index.html" class="btn-voltar">← Voltar para Home</a>
+</div>
+
+<section class="hero">
+  <h2>Catálogo BYD</h2>
+  <p>Elétricos premium com procedência garantida</p>
+</section>
+
+<section class="catalogo">
+
+  <div class="card">
+    <a href="dolphin.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/queijo_yellow_xbrl6o">
+    </a>
+    <div class="card-body">
+      <h3>BYD Dolphin</h3>
+      <a class="btn" onclick="falarWhats('BYD Dolphin')">Tenho Interesse</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <a href="dolphin-mini.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_iba9aj">
+    </a>
+    <div class="card-body">
+      <h3>BYD Dolphin Mini 5 Lugares 2026</h3>
+      <a class="btn" onclick="falarWhats('BYD Dolphin Mini 5 Lugares 2026')">Tenho Interesse</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <a href="dolphin-plus.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/queijo_yellow_xbrl6o">
+    </a>
+    <div class="card-body">
+      <h3>BYD Dolphin Plus</h3>
+      <a class="btn" onclick="falarWhats('BYD Dolphin Plus')">Tenho Interesse</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <a href="seal.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_em7jqb">
+    </a>
+    <div class="card-body">
+      <h3>BYD Seal</h3>
+      <a class="btn" onclick="falarWhats('BYD Seal')">Tenho Interesse</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <a href="han.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_tu50qa">
+    </a>
+    <div class="card-body">
+      <h3>BYD Han</h3>
+      <a class="btn" onclick="falarWhats('BYD Han')">Tenho Interesse</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <a href="tan.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Snow_White_toqiin">
+    </a>
+    <div class="card-body">
+      <h3>BYD Tan</h3>
+      <a class="btn" onclick="falarWhats('BYD Tan')">Tenho Interesse</a>
+    </div>
+  </div>
+
+</section>
+
+<a class="whatsapp-float" onclick="falarWhats('BYD Dahruj Ceasa')">
+  WhatsApp
+</a>
+
+<script>
+function falarWhats(modelo){
+  const telefone = "5511947377291";
+  const mensagem =
+    `Olá! Vi o ${modelo} no catálogo do site e gostaria de saber mais sobre as condições de financiamento. Pode me ajudar?`;
+  window.open(
+    `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`,
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
