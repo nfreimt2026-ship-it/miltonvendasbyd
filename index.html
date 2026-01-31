@@ -82,6 +82,7 @@ header a{
   text-decoration:none;
   font-size:.85rem;
   font-weight:bold;
+  cursor:pointer;
 }
 
 .whatsapp-float{
@@ -102,7 +103,7 @@ header a{
 
 <header>
   <h1>BYD Dahruj Ceasa</h1>
-  <a href="https://wa.me/5511947377291" target="_blank">Falar com Consultor</a>
+  <a href="javascript:void(0)" onclick="falarWhats('BYD')">Falar com Consultor</a>
 </header>
 
 <section class="hero">
@@ -112,34 +113,76 @@ header a{
 
 <section class="carousel">
 
+  <!-- DOLPHIN -->
   <div class="card">
-    <a href="dolphin.html"><img src="https://res.cloudinary.com/dny3p8nig/image/upload/queijo_yellow_xbrl6o"></a>
-    <div class="card-body"><h3>Dolphin</h3><a class="btn" href="https://wa.me/5511947377291">Tenho Interesse</a></div>
+    <a href="dolphin.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/queijo_yellow_xbrl6o">
+    </a>
+    <div class="card-body">
+      <h3>BYD Dolphin</h3>
+      <a class="btn" onclick="falarWhats('BYD Dolphin')">Tenho Interesse</a>
+    </div>
   </div>
 
+  <!-- DOLPHIN MINI -->
   <div class="card">
-    <a href="dolphin-mini.html"><img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_iba9aj"></a>
-    <div class="card-body"><h3>Dolphin Mini</h3><a class="btn" href="https://wa.me/5511947377291">Tenho Interesse</a></div>
+    <a href="dolphin-mini.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_iba9aj">
+    </a>
+    <div class="card-body">
+      <h3>BYD Dolphin Mini 5 Lugares 2026</h3>
+      <a class="btn" onclick="falarWhats('BYD Dolphin Mini 5 Lugares 2026')">Tenho Interesse</a>
+    </div>
   </div>
 
+  <!-- DOLPHIN PLUS -->
   <div class="card">
-    <a href="dolphin-plus.html"><img src="https://res.cloudinary.com/dny3p8nig/image/upload/Dolphin%20Plus/Ski_White_Dolphin_Grey_ir0grc"></a>
-    <div class="card-body"><h3>Dolphin Plus</h3><a class="btn" href="https://wa.me/5511947377291">Tenho Interesse</a></div>
+    <a href="dolphin-plus.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Dolphin%20Plus/Ski_White_Dolphin_Grey_ir0grc">
+    </a>
+    <div class="card-body">
+      <h3>BYD Dolphin Plus</h3>
+      <a class="btn" onclick="falarWhats('BYD Dolphin Plus')">Tenho Interesse</a>
+    </div>
   </div>
 
+  <!-- SEAL -->
   <div class="card">
-    <a href="seal.html"><img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_em7jqb"></a>
-    <div class="card-body"><h3>Seal</h3><a class="btn" href="https://wa.me/5511947377291">Tenho Interesse</a></div>
+    <a href="seal.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_em7jqb">
+    </a>
+    <div class="card-body">
+      <h3>BYD Seal</h3>
+      <a class="btn" onclick="falarWhats('BYD Seal')">Tenho Interesse</a>
+    </div>
   </div>
 
+  <!-- HAN -->
   <div class="card">
-    <a href="han.html"><img src="https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_tu50qa"></a>
-    <div class="card-body"><h3>Han</h3><a class="btn" href="https://wa.me/5511947377291">Tenho Interesse</a></div>
+    <a href="han.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_tu50qa">
+    </a>
+    <div class="card-body">
+      <h3>BYD Han</h3>
+      <a class="btn" onclick="falarWhats('BYD Han')">Tenho Interesse</a>
+    </div>
   </div>
 
 </section>
 
-<a class="whatsapp-float" href="https://wa.me/5511947377291" target="_blank">WhatsApp</a>
+<a class="whatsapp-float" onclick="falarWhats('BYD Dahruj Ceasa')">
+  WhatsApp
+</a>
+
+<!-- FUNÇÃO GLOBAL WHATSAPP -->
+<script>
+function falarWhats(modelo){
+  const telefone = "5511947377291";
+  const mensagem = `Olá! Vi o ${modelo} no catálogo do site e gostaria de saber mais sobre as condições de financiamento. Pode me ajudar?`;
+  const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
