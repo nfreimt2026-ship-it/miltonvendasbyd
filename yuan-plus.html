@@ -119,17 +119,25 @@ header a{
   border:2px solid #ddd;
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLOAT */
 .whatsapp-float{
   position:fixed;
   right:20px;
   bottom:20px;
-  background:var(--verde);
-  color:#fff;
-  padding:14px 18px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
+  width:60px;
+  height:60px;
+  background:#25d366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);
+  cursor:pointer;
+  z-index:999;
+}
+.whatsapp-icon{
+  width:32px;
+  height:32px;
 }
 </style>
 </head>
@@ -222,8 +230,11 @@ header a{
 
 </section>
 
-<a class="whatsapp-float" onclick="falarWhats('BYD Yuan Plus')">
-  WhatsApp
+<!-- WHATSAPP -->
+<a class="whatsapp-float" onclick="falarWhats('Site Dahruj Ceasa')">
+  <img src="https://res.cloudinary.com/dny3p8nig/image/upload/whatsapp_krknit"
+       alt="WhatsApp"
+       class="whatsapp-icon">
 </a>
 
 <script>
