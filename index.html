@@ -12,31 +12,20 @@
   --cinza:#f4f4f4;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-  background:var(--cinza);
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:var(--cinza);color:#333}
 
 /* HEADER */
 header{
   background:#fff;
-  padding:15px 30px;
+  padding:15px 25px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
-header h1{
-  color:var(--azul);
-  font-size:1.1rem;
-}
-header .cta{
+header h1{color:var(--azul);font-size:1.1rem}
+header a{
   background:var(--azul);
   color:#fff;
   padding:10px 16px;
@@ -50,60 +39,68 @@ header .cta{
 .hero{
   background:var(--azul);
   color:#fff;
-  padding:40px 20px;
+  padding:35px 20px;
   text-align:center;
 }
+.hero h2{font-size:1.5rem;margin-bottom:6px}
 
-/* CARROSSEL */
-.carousel{
-  display:flex;
-  gap:18px;
-  overflow-x:auto;
+/* GRID */
+.catalogo{
+  max-width:1200px;
+  margin:auto;
   padding:30px 20px;
-  scroll-snap-type:x mandatory;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:22px;
+}
+
+/* DESKTOP */
+@media(min-width:768px){
+  .catalogo{
+    grid-template-columns:repeat(3,1fr);
+  }
 }
 
 /* CARD */
 .card{
-  min-width:240px;
   background:#fff;
   border-radius:14px;
   overflow:hidden;
-  box-shadow:0 4px 14px rgba(0,0,0,.15);
-  scroll-snap-align:start;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+  transition:.3s;
 }
+.card:hover{transform:translateY(-4px)}
 
 .card img{
   width:100%;
-  height:150px;
+  height:170px;
   object-fit:cover;
 }
 
 .card-body{
-  padding:12px;
+  padding:14px;
   text-align:center;
 }
 
 .card-body h3{
-  font-size:.95rem;
+  font-size:1rem;
   color:var(--azul);
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
-/* BOTÃO */
 .btn{
   display:block;
   background:var(--verde);
   color:#fff;
-  padding:10px;
+  padding:11px;
   border-radius:6px;
   text-decoration:none;
-  font-size:.85rem;
   font-weight:bold;
+  font-size:.9rem;
   cursor:pointer;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP FIXO */
 .whatsapp-float{
   position:fixed;
   right:20px;
@@ -114,7 +111,6 @@ header .cta{
   border-radius:50px;
   text-decoration:none;
   font-weight:bold;
-  cursor:pointer;
 }
 </style>
 </head>
@@ -123,22 +119,20 @@ header .cta{
 
 <header>
   <h1>BYD Dahruj Ceasa</h1>
-  <a class="cta" onclick="falarWhats('BYD Dahruj Ceasa')">
-    Falar com Consultor
-  </a>
+  <a onclick="falarWhats('BYD Dahruj Ceasa')">Falar com Consultor</a>
 </header>
 
 <section class="hero">
   <h2>Catálogo BYD</h2>
-  <p>Dolphin • Dolphin Mini • Dolphin Plus • Seal • Han • Tan</p>
+  <p>Elétricos premium com procedência garantida</p>
 </section>
 
-<section class="carousel">
+<section class="catalogo">
 
   <!-- DOLPHIN -->
   <div class="card">
     <a href="dolphin.html">
-      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/queijo_yellow_xbrl6o">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/queijo_yellow_xbrl6o" alt="BYD Dolphin">
     </a>
     <div class="card-body">
       <h3>BYD Dolphin</h3>
@@ -149,18 +143,18 @@ header .cta{
   <!-- DOLPHIN MINI -->
   <div class="card">
     <a href="dolphin-mini.html">
-      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_iba9aj">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_iba9aj" alt="BYD Dolphin Mini">
     </a>
     <div class="card-body">
-      <h3>BYD Dolphin Mini 5 Lugares</h3>
+      <h3>BYD Dolphin Mini 5 Lugares 2026</h3>
       <a class="btn" onclick="falarWhats('BYD Dolphin Mini 5 Lugares 2026')">Tenho Interesse</a>
     </div>
   </div>
 
-  <!-- DOLPHIN PLUS -->
+  <!-- DOLPHIN PLUS (CORRIGIDO) -->
   <div class="card">
     <a href="dolphin-plus.html">
-      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Dolphin%20Plus/Ski_White_Dolphin_Grey_ir0grc">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/queijo_yellow_xbrl6o" alt="BYD Dolphin Plus">
     </a>
     <div class="card-body">
       <h3>BYD Dolphin Plus</h3>
@@ -171,7 +165,7 @@ header .cta{
   <!-- SEAL -->
   <div class="card">
     <a href="seal.html">
-      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_em7jqb">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_em7jqb" alt="BYD Seal">
     </a>
     <div class="card-body">
       <h3>BYD Seal</h3>
@@ -182,7 +176,7 @@ header .cta{
   <!-- HAN -->
   <div class="card">
     <a href="han.html">
-      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_tu50qa">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_tu50qa" alt="BYD Han">
     </a>
     <div class="card-body">
       <h3>BYD Han</h3>
@@ -193,7 +187,7 @@ header .cta{
   <!-- TAN -->
   <div class="card">
     <a href="tan.html">
-      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Snow_White_toqiin">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Snow_White_toqiin" alt="BYD Tan">
     </a>
     <div class="card-body">
       <h3>BYD Tan</h3>
@@ -207,14 +201,15 @@ header .cta{
   WhatsApp
 </a>
 
-<!-- FUNÇÃO WHATSAPP DINÂMICA -->
 <script>
 function falarWhats(modelo){
   const telefone = "5511947377291";
   const mensagem =
     `Olá! Vi o ${modelo} no catálogo do site e gostaria de saber mais sobre as condições de financiamento. Pode me ajudar?`;
-  const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
-  window.open(url, "_blank");
+  window.open(
+    `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`,
+    "_blank"
+  );
 }
 </script>
 
