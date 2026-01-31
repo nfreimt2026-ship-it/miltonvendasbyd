@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BYD Dahruj Ceasa | Vitrine</title>
+
+<style>
+:root{
+  --azul:#0b2a4a;
+  --verde:#25d366;
+  --cinza:#f4f4f4;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:var(--cinza)}
+
+header{
+  background:#fff;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+header h1{color:var(--azul);font-size:1.1rem}
+header a{
+  background:var(--azul);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.hero{
+  background:var(--azul);
+  color:#fff;
+  padding:40px 20px;
+  text-align:center;
+}
+
+.carousel{
+  display:flex;
+  gap:18px;
+  overflow-x:auto;
+  padding:30px 20px;
+  scroll-snap-type:x mandatory;
+}
+
+.card{
+  min-width:240px;
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,.15);
+  scroll-snap-align:start;
+}
+
+.card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+}
+
+.card-body{
+  padding:12px;
+  text-align:center;
+}
+
+.card-body h3{
+  font-size:.95rem;
+  color:var(--azul);
+  margin-bottom:10px;
+}
+
+.btn{
+  display:block;
+  background:var(--verde);
+  color:#fff;
+  padding:10px;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:.85rem;
+  font-weight:bold;
+}
+
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:var(--verde);
+  color:#fff;
+  padding:14px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>BYD Dahruj Ceasa</h1>
+  <a href="https://wa.me/5511947377291" target="_blank">Falar com Consultor</a>
+</header>
+
+<section class="hero">
+  <h2>Vitrine de Elétricos BYD</h2>
+  <p>Dolphin • Dolphin Mini • Dolphin Plus • Seal • Han</p>
+</section>
+
+<section class="carousel">
+
+  <div class="card">
+    <a href="dolphin.html"><img src="https://res.cloudinary.com/dny3p8nig/image/upload/queijo_yellow_xbrl6o"></a>
+    <div class="card-body"><h3>Dolphin</h3><a class="btn" href="https://wa.me/5511947377291">Tenho Interesse</a></div>
+  </div>
+
+  <div class="card">
+    <a href="dolphin-mini.html"><img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_iba9aj"></a>
+    <div class="card-body"><h3>Dolphin Mini</h3><a class="btn" href="https://wa.me/5511947377291">Tenho Interesse</a></div>
+  </div>
+
+  <div class="card">
+    <a href="dolphin-plus.html"><img src="https://res.cloudinary.com/dny3p8nig/image/upload/Dolphin%20Plus/Ski_White_Dolphin_Grey_ir0grc"></a>
+    <div class="card-body"><h3>Dolphin Plus</h3><a class="btn" href="https://wa.me/5511947377291">Tenho Interesse</a></div>
+  </div>
+
+  <div class="card">
+    <a href="seal.html"><img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_em7jqb"></a>
+    <div class="card-body"><h3>Seal</h3><a class="btn" href="https://wa.me/5511947377291">Tenho Interesse</a></div>
+  </div>
+
+  <div class="card">
+    <a href="han.html"><img src="https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_tu50qa"></a>
+    <div class="card-body"><h3>Han</h3><a class="btn" href="https://wa.me/5511947377291">Tenho Interesse</a></div>
+  </div>
+
+</section>
+
+<a class="whatsapp-float" href="https://wa.me/5511947377291" target="_blank">WhatsApp</a>
+
+</body>
+</html>

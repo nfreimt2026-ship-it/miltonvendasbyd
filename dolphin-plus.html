@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BYD Dolphin Plus | BYD Dahruj Ceasa</title>
+
+<style>
+:root{
+  --azul:#0b2a4a;
+  --verde:#25d366;
+  --cinza:#f4f4f4;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:var(--cinza);color:#333}
+
+header{
+  background:#fff;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+header h1{color:var(--azul);font-size:1.1rem}
+header a{
+  background:var(--azul);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.hero{
+  background:linear-gradient(rgba(11,42,74,.85),rgba(11,42,74,.85)),
+  url("https://res.cloudinary.com/dny3p8nig/image/upload/Dolphin%20Plus/Ski_White_Dolphin_Grey_ir0grc") center/cover;
+  color:#fff;
+  padding:70px 20px;
+  text-align:center;
+}
+.hero h2{font-size:2rem;margin-bottom:8px}
+.hero p{font-size:1.05rem}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.bloco{
+  background:#fff;
+  border-radius:12px;
+  padding:30px;
+  margin-bottom:30px;
+  box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+.bloco h3{color:var(--azul);margin-bottom:15px}
+
+.lista{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:10px;
+}
+.lista li{
+  list-style:none;
+  padding-left:18px;
+  position:relative;
+}
+.lista li::before{
+  content:"✔";
+  color:var(--verde);
+  position:absolute;
+  left:0;
+}
+
+.tabela{
+  width:100%;
+  border-collapse:collapse;
+}
+.tabela td{
+  padding:10px;
+  border-bottom:1px solid #ddd;
+}
+.tabela td:first-child{font-weight:bold;width:45%}
+
+.galeria-img{
+  width:100%;
+  max-width:720px;
+  border-radius:12px;
+  margin:20px 0;
+}
+
+.cores{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+}
+.cores span{
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  cursor:pointer;
+  border:2px solid #ddd;
+}
+
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:var(--verde);
+  color:#fff;
+  padding:14px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>BYD Dahruj Ceasa</h1>
+  <a href="index.html">Voltar</a>
+</header>
+
+<section class="hero">
+  <h2>BYD Dolphin Plus</h2>
+  <p>Performance, autonomia e tecnologia</p>
+</section>
+
+<section class="container">
+
+  <!-- GALERIA -->
+  <div class="bloco" style="text-align:center">
+    <h3>Galeria de Cores</h3>
+
+    <img id="plusGaleria"
+      src="https://res.cloudinary.com/dny3p8nig/image/upload/Dolphin%20Plus/Ski_White_Dolphin_Grey_ir0grc"
+      class="galeria-img">
+
+    <div class="cores">
+      <span title="Ski White / Dolphin Grey"
+        style="background:linear-gradient(45deg,#fff,#9e9e9e)"
+        onclick="trocarPlus('https://res.cloudinary.com/dny3p8nig/image/upload/Dolphin%20Plus/Ski_White_Dolphin_Grey_ir0grc')"></span>
+
+      <span title="Delan Black / Atlantis Grey"
+        style="background:linear-gradient(45deg,#000,#555)"
+        onclick="trocarPlus('https://res.cloudinary.com/dny3p8nig/image/upload/Dolphin%20Plus/Delan_Black_Atlantis_Grey_s375bk')"></span>
+
+      <span title="Afterglow Pink / Dolphin Grey"
+        style="background:linear-gradient(45deg,#f48fb1,#9e9e9e)"
+        onclick="trocarPlus('https://res.cloudinary.com/dny3p8nig/image/upload/Dolphin%20Plus/Afterglow_Pink_Dolphin_Grey_mkwvkm')"></span>
+
+      <span title="Surfing Blue / Dolphin Grey"
+        style="background:linear-gradient(45deg,#2196f3,#9e9e9e)"
+        onclick="trocarPlus('https://res.cloudinary.com/dny3p8nig/image/upload/Dolphin%20Plus/Surfing_Blue_Dolphin_Grey_tjwtjd')"></span>
+    </div>
+  </div>
+
+  <!-- DESTAQUES -->
+  <div class="bloco">
+    <h3>Destaques</h3>
+    <ul class="lista">
+      <li>Keyless (abertura e fechamento das portas e porta-malas)</li>
+      <li>Chave presencial</li>
+      <li>Assistente de Frenagem Hidráulico (HBA)</li>
+      <li>Sistema de Controle de Tração (TCS)</li>
+    </ul>
+  </div>
+
+  <!-- DIMENSÕES -->
+  <div class="bloco">
+    <h3>Dimensões</h3>
+    <table class="tabela">
+      <tr><td>Altura (mm)</td><td>1.570</td></tr>
+      <tr><td>Largura (mm)</td><td>1.770</td></tr>
+      <tr><td>Comprimento (mm)</td><td>4.290</td></tr>
+      <tr><td>Distância entre eixos (mm)</td><td>2.700</td></tr>
+      <tr><td>Ocupantes</td><td>5</td></tr>
+      <tr><td>Peso em ordem de marcha (kg)</td><td>1.658</td></tr>
+      <tr><td>Peso bruto total (kg)</td><td>2.068</td></tr>
+    </table>
+  </div>
+
+  <!-- CHASSI -->
+  <div class="bloco">
+    <h3>Chassi / Suspensão</h3>
+    <table class="tabela">
+      <tr><td>Suspensão dianteira</td><td>McPherson</td></tr>
+      <tr><td>Suspensão traseira</td><td>Independente Multi-link</td></tr>
+      <tr><td>Pneus</td><td>205/50 R17</td></tr>
+      <tr><td>Freio dianteiro</td><td>Discos ventilados</td></tr>
+      <tr><td>Freio traseiro</td><td>Discos sólidos</td></tr>
+    </table>
+  </div>
+
+  <!-- MOTOR -->
+  <div class="bloco">
+    <h3>Motor Elétrico</h3>
+    <table class="tabela">
+      <tr><td>Potência (cv)</td><td>204</td></tr>
+      <tr><td>Torque (kgfm)</td><td>31,6</td></tr>
+      <tr><td>Bateria (kWh)</td><td>60,48</td></tr>
+      <tr><td>Autonomia elétrica (km)</td><td>427</td></tr>
+      <tr><td>0–100 km/h (s)</td><td>7</td></tr>
+      <tr><td>Velocidade máxima (km/h)</td><td>160</td></tr>
+    </table>
+  </div>
+
+</section>
+
+<a class="whatsapp-float"
+   href="https://wa.me/5511947377291"
+   target="_blank">
+  WhatsApp
+</a>
+
+<script>
+function trocarPlus(img){
+  document.getElementById("plusGaleria").src = img;
+}
+</script>
+
+</body>
+</html>

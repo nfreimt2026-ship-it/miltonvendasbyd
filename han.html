@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BYD Han | BYD Dahruj Ceasa</title>
+
+<style>
+:root{
+  --azul:#0b2a4a;
+  --verde:#25d366;
+  --cinza:#f4f4f4;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:var(--cinza);color:#333}
+
+/* HEADER */
+header{
+  background:#fff;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+header h1{color:var(--azul);font-size:1.1rem}
+header a{
+  background:var(--azul);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(11,42,74,.85),rgba(11,42,74,.85)),
+  url("https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_tu50qa") center/cover;
+  color:#fff;
+  padding:70px 20px;
+  text-align:center;
+}
+.hero h2{font-size:2rem;margin-bottom:8px}
+.hero p{font-size:1.05rem}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+/* BLOCO */
+.bloco{
+  background:#fff;
+  border-radius:12px;
+  padding:30px;
+  margin-bottom:30px;
+  box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+.bloco h3{
+  color:var(--azul);
+  margin-bottom:15px;
+}
+
+/* LISTA */
+.lista{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:10px;
+}
+.lista li{
+  list-style:none;
+  padding-left:18px;
+  position:relative;
+}
+.lista li::before{
+  content:"✔";
+  color:var(--verde);
+  position:absolute;
+  left:0;
+}
+
+/* TABELA */
+.tabela{
+  width:100%;
+  border-collapse:collapse;
+}
+.tabela td{
+  padding:10px;
+  border-bottom:1px solid #ddd;
+}
+.tabela td:first-child{
+  font-weight:bold;
+  width:45%;
+}
+
+/* GALERIA */
+.galeria-img{
+  width:100%;
+  max-width:720px;
+  border-radius:12px;
+  margin:20px 0;
+}
+
+.cores{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.cores span{
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  cursor:pointer;
+  border:2px solid #ddd;
+}
+
+/* WHATSAPP */
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:var(--verde);
+  color:#fff;
+  padding:14px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>BYD Dahruj Ceasa</h1>
+  <a href="index.html">Voltar</a>
+</header>
+
+<section class="hero">
+  <h2>BYD Han</h2>
+  <p>Sedã elétrico premium de alta performance</p>
+</section>
+
+<section class="container">
+
+  <!-- GALERIA DE CORES -->
+  <div class="bloco" style="text-align:center">
+    <h3>Galeria de Cores</h3>
+
+    <img id="hanGaleria"
+      src="https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_tu50qa"
+      alt="BYD Han Skiing White"
+      class="galeria-img">
+
+    <div class="cores">
+      <span title="Skiing White" style="background:#A9A9A9"
+        onclick="trocarHan('https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_tu50qa','Skiing White')"></span>
+
+      <span title="Space Black" style="background:#181818"
+        onclick="trocarHan('https://res.cloudinary.com/dny3p8nig/image/upload/Space_Black_ucltj7','Space Black')"></span>
+
+      <span title="Time Grey" style="background:#DCDCDC"
+        onclick="trocarHan('https://res.cloudinary.com/dny3p8nig/image/upload/Time_Grey_ct1bny','Time Grey')"></span>
+
+      <span title="AI Blue" style="background:#2c7bd1"
+        onclick="trocarHan('https://res.cloudinary.com/dny3p8nig/image/upload/AI_Blue_sje73g','AI Blue')"></span>
+    </div>
+  </div>
+
+  <!-- ITENS DE SÉRIE -->
+  <div class="bloco">
+    <h3>Itens de Série</h3>
+    <ul class="lista">
+      <li>Maçanetas elétricas embutidas</li>
+      <li>Amortecedor pneumático do capô</li>
+      <li>Logotipo frontal luminescente</li>
+      <li>Teto solar elétrico panorâmico com anti-esmagamento</li>
+      <li>Abertura e fechamento elétrico do porta-malas</li>
+    </ul>
+  </div>
+
+  <!-- DIMENSÕES -->
+  <div class="bloco">
+    <h3>Dimensões</h3>
+    <table class="tabela">
+      <tr><td>Comprimento</td><td>4.995 mm</td></tr>
+      <tr><td>Largura</td><td>1.910 mm</td></tr>
+      <tr><td>Altura</td><td>1.495 mm</td></tr>
+      <tr><td>Entre-eixos</td><td>2.920 mm</td></tr>
+      <tr><td>Porta-malas</td><td>410 L</td></tr>
+      <tr><td>Ocupantes</td><td>5</td></tr>
+      <tr><td>Peso em ordem de marcha</td><td>2.250 kg</td></tr>
+    </table>
+  </div>
+
+  <!-- CHASSI -->
+  <div class="bloco">
+    <h3>Chassi / Suspensão</h3>
+    <table class="tabela">
+      <tr><td>Suspensão dianteira</td><td>McPherson</td></tr>
+      <tr><td>Suspensão traseira</td><td>Multi-link</td></tr>
+      <tr><td>Pneus</td><td>245/45 R19 (D/T)</td></tr>
+      <tr><td>Freio dianteiro</td><td>Pinças Brembo + discos ventilados e perfurados</td></tr>
+      <tr><td>Freio traseiro</td><td>Discos</td></tr>
+    </table>
+  </div>
+
+  <!-- MOTOR -->
+  <div class="bloco">
+    <h3>Motor Elétrico</h3>
+    <table class="tabela">
+      <tr><td>Potência</td><td>517 cv</td></tr>
+      <tr><td>Torque</td><td>71,4 kgfm</td></tr>
+      <tr><td>Bateria</td><td>85,4 kWh</td></tr>
+      <tr><td>Autonomia elétrica</td><td>349 km</td></tr>
+      <tr><td>0–100 km/h</td><td>3,9 s</td></tr>
+      <tr><td>Velocidade máxima</td><td>186 km/h</td></tr>
+    </table>
+  </div>
+
+</section>
+
+<a class="whatsapp-float"
+   href="https://wa.me/5511947377291"
+   target="_blank">
+  WhatsApp
+</a>
+
+<script>
+function trocarHan(img, cor){
+  const foto = document.getElementById("hanGaleria");
+  foto.src = img;
+  foto.alt = "BYD Han " + cor;
+}
+</script>
+
+</body>
+</html>
