@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo BYD | Dahruj Ceasa</title>
+
+<style>
+:root{
+  --azul:#0b2a4a;
+  --verde:#25d366;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#f4f4f4;color:#333}
+
+/* HEADER */
+header{
+  background:#fff;
+  padding:14px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+header img{height:38px}
+header a{
+  background:var(--azul);
+  color:#fff;
+  padding:9px 16px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* VOLTAR */
+.voltar{
+  max-width:1200px;
+  margin:20px auto 0;
+  padding:0 20px;
+}
+.voltar a{
+  color:var(--azul);
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* TÍTULO */
+.titulo{
+  max-width:1200px;
+  margin:20px auto;
+  padding:0 20px;
+}
+.titulo h1{color:var(--azul)}
+
+/* CARROSSEL */
+.carrossel{
+  max-width:1200px;
+  margin:0 auto 40px;
+  padding:0 20px;
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+}
+.carrossel::-webkit-scrollbar{display:none}
+
+/* CARD */
+.card{
+  min-width:200px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,.12);
+  scroll-snap-align:start;
+  text-align:center;
+}
+.card img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:10px 10px 0 0;
+}
+.card h3{
+  font-size:.95rem;
+  padding:10px 6px;
+}
+.card a{
+  display:block;
+  margin:10px;
+  padding:8px;
+  background:var(--verde);
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  font-size:.85rem;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="https://res.cloudinary.com/dny3p8nig/image/upload/logo-byd_sig5ob" alt="BYD">
+  <a href="index.html">Home</a>
+</header>
+
+<div class="voltar">
+  <a href="index.html">← Voltar</a>
+</div>
+
+<div class="titulo">
+  <h1>Catálogo BYD</h1>
+</div>
+
+<!-- CARROSSEL -->
+<section class="carrossel">
+
+  <!-- DOLPHIN -->
+  <div class="card">
+    <a href="dolphin.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/queijo_yellow_xbrl6o" alt="BYD Dolphin">
+    </a>
+    <h3>BYD Dolphin</h3>
+    <a onclick="falarWhats('BYD Dolphin')">Tenho Interesse</a>
+  </div>
+
+  <!-- DOLPHIN MINI -->
+  <div class="card">
+    <a href="dolphin-mini.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_iba9aj" alt="Dolphin Mini">
+    </a>
+    <h3>Dolphin Mini 5 Lugares</h3>
+    <a onclick="falarWhats('BYD Dolphin Mini 5 Lugares')">Tenho Interesse</a>
+  </div>
+
+  <!-- DOLPHIN PLUS -->
+  <div class="card">
+    <a href="dolphin-plus.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/black_hltyh8" alt="Dolphin Plus">
+    </a>
+    <h3>Dolphin Plus</h3>
+    <a onclick="falarWhats('BYD Dolphin Plus')">Tenho Interesse</a>
+  </div>
+
+  <!-- YUAN PLUS -->
+  <div class="card">
+    <a href="yuan-plus.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_zh5seu" alt="Yuan Plus">
+    </a>
+    <h3>BYD Yuan Plus</h3>
+    <a onclick="falarWhats('BYD Yuan Plus')">Tenho Interesse</a>
+  </div>
+
+</section>
+
+<script>
+function falarWhats(modelo){
+  const telefone = "5511947377291";
+  const mensagem =
+    `Olá! Vi o ${modelo} no catálogo do site e gostaria de saber mais sobre as condições de financiamento. Pode me ajudar?`;
+  window.open(
+    `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`,
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>

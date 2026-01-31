@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BYD Dahruj Ceasa | Concessionária</title>
+<title>Dahruj Ceasa | Concessionária</title>
 
 <style>
 :root{
@@ -14,8 +14,8 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 body{background:#fff;color:#333}
 
-/* HEADER */
-header{
+/* HEADER MULTI-MARCA */
+.topo-multi{
   background:#fff;
   padding:16px 30px;
   display:flex;
@@ -24,18 +24,25 @@ header{
   box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
 
-.logo-byd{
+.logos-marca{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.logo-marca{
   height:42px;
   cursor:pointer;
 }
 
-.cta{
+.btn-consultor{
   background:var(--azul);
   color:#fff;
   padding:10px 18px;
   border-radius:6px;
   text-decoration:none;
   font-weight:bold;
+  cursor:pointer;
 }
 
 /* HERO */
@@ -53,36 +60,45 @@ header{
 
 .hero h1{
   font-size:2.2rem;
-  margin-bottom:14px;
-}
-
-.hero p{
-  font-size:1.1rem;
-  margin-bottom:22px;
+  margin-bottom:30px;
 }
 
 .hero a{
+  display:inline-block;
   background:var(--verde);
   color:#fff;
-  padding:14px 24px;
+  padding:14px 26px;
   border-radius:8px;
   font-size:1rem;
   text-decoration:none;
   font-weight:bold;
+  margin:10px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <a href="catalogo.html">
-    <img src="https://res.cloudinary.com/dny3p8nig/image/upload/logo-byd_sig5ob"
-         alt="BYD Dahruj Ceasa"
-         class="logo-byd">
-  </a>
+<header class="topo-multi">
+  <div class="logos-marca">
 
-  <a class="cta" onclick="falarWhats('BYD Dahruj Ceasa')">
+    <!-- LOGO FIAT -->
+    <a href="catalogofiat.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/logo-fiat_cgqwx0"
+           alt="FIAT"
+           class="logo-marca">
+    </a>
+
+    <!-- LOGO BYD -->
+    <a href="catalogobyd.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/logo-byd_sig5ob"
+           alt="BYD Dahruj Ceasa"
+           class="logo-marca">
+    </a>
+
+  </div>
+
+  <a class="btn-consultor" onclick="falarWhats('Dahruj Ceasa')">
     Falar com Consultor
   </a>
 </header>
@@ -90,16 +106,21 @@ header{
 <section class="hero">
   <div>
     <h1>O futuro da mobilidade já chegou</h1>
-    <p>Conheça a linha completa de veículos elétricos BYD</p>
-    <a href="catalogo.html">Ver Catálogo BYD</a>
+
+    <a href="catalogobyd.html">Catálogo BYD</a>
+    <a href="catalogofiat.html">Catálogo FIAT</a>
   </div>
 </section>
 
 <script>
 function falarWhats(modelo){
   const telefone = "5511947377291";
-  const msg = `Olá! Visitei o site da ${modelo} e gostaria de mais informações sobre os veículos disponíveis.`;
-  window.open(`https://wa.me/${telefone}?text=${encodeURIComponent(msg)}`,"_blank");
+  const msg =
+    `Olá! Visitei o site da ${modelo} e gostaria de mais informações sobre os veículos disponíveis.`;
+  window.open(
+    `https://wa.me/${telefone}?text=${encodeURIComponent(msg)}`,
+    "_blank"
+  );
 }
 </script>
 
