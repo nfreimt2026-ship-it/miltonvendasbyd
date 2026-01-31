@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BYD Dahruj Ceasa | Vitrine</title>
+<title>BYD Dahruj Ceasa | Catálogo</title>
 
 <style>
 :root{
@@ -11,9 +11,19 @@
   --verde:#25d366;
   --cinza:#f4f4f4;
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:var(--cinza)}
 
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+  background:var(--cinza);
+}
+
+/* HEADER */
 header{
   background:#fff;
   padding:15px 30px;
@@ -22,16 +32,21 @@ header{
   align-items:center;
   box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
-header h1{color:var(--azul);font-size:1.1rem}
-header a{
+header h1{
+  color:var(--azul);
+  font-size:1.1rem;
+}
+header .cta{
   background:var(--azul);
   color:#fff;
   padding:10px 16px;
   border-radius:6px;
   text-decoration:none;
   font-weight:bold;
+  cursor:pointer;
 }
 
+/* HERO */
 .hero{
   background:var(--azul);
   color:#fff;
@@ -39,6 +54,7 @@ header a{
   text-align:center;
 }
 
+/* CARROSSEL */
 .carousel{
   display:flex;
   gap:18px;
@@ -47,6 +63,7 @@ header a{
   scroll-snap-type:x mandatory;
 }
 
+/* CARD */
 .card{
   min-width:240px;
   background:#fff;
@@ -73,6 +90,7 @@ header a{
   margin-bottom:10px;
 }
 
+/* BOTÃO */
 .btn{
   display:block;
   background:var(--verde);
@@ -85,6 +103,7 @@ header a{
   cursor:pointer;
 }
 
+/* WHATSAPP FLOAT */
 .whatsapp-float{
   position:fixed;
   right:20px;
@@ -95,6 +114,7 @@ header a{
   border-radius:50px;
   text-decoration:none;
   font-weight:bold;
+  cursor:pointer;
 }
 </style>
 </head>
@@ -103,12 +123,14 @@ header a{
 
 <header>
   <h1>BYD Dahruj Ceasa</h1>
-  <a href="javascript:void(0)" onclick="falarWhats('BYD')">Falar com Consultor</a>
+  <a class="cta" onclick="falarWhats('BYD Dahruj Ceasa')">
+    Falar com Consultor
+  </a>
 </header>
 
 <section class="hero">
-  <h2>Vitrine de Elétricos BYD</h2>
-  <p>Dolphin • Dolphin Mini • Dolphin Plus • Seal • Han</p>
+  <h2>Catálogo BYD</h2>
+  <p>Dolphin • Dolphin Mini • Dolphin Plus • Seal • Han • Tan</p>
 </section>
 
 <section class="carousel">
@@ -130,7 +152,7 @@ header a{
       <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_iba9aj">
     </a>
     <div class="card-body">
-      <h3>BYD Dolphin Mini 5 Lugares 2026</h3>
+      <h3>BYD Dolphin Mini 5 Lugares</h3>
       <a class="btn" onclick="falarWhats('BYD Dolphin Mini 5 Lugares 2026')">Tenho Interesse</a>
     </div>
   </div>
@@ -168,17 +190,29 @@ header a{
     </div>
   </div>
 
+  <!-- TAN -->
+  <div class="card">
+    <a href="tan.html">
+      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Snow_White_toqiin">
+    </a>
+    <div class="card-body">
+      <h3>BYD Tan</h3>
+      <a class="btn" onclick="falarWhats('BYD Tan')">Tenho Interesse</a>
+    </div>
+  </div>
+
 </section>
 
 <a class="whatsapp-float" onclick="falarWhats('BYD Dahruj Ceasa')">
   WhatsApp
 </a>
 
-<!-- FUNÇÃO GLOBAL WHATSAPP -->
+<!-- FUNÇÃO WHATSAPP DINÂMICA -->
 <script>
 function falarWhats(modelo){
   const telefone = "5511947377291";
-  const mensagem = `Olá! Vi o ${modelo} no catálogo do site e gostaria de saber mais sobre as condições de financiamento. Pode me ajudar?`;
+  const mensagem =
+    `Olá! Vi o ${modelo} no catálogo do site e gostaria de saber mais sobre as condições de financiamento. Pode me ajudar?`;
   const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
   window.open(url, "_blank");
 }
