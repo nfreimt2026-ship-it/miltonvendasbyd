@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BYD Tan | BYD Dahruj Ceasa</title>
+
+<style>
+:root{
+  --azul:#0b2a4a;
+  --verde:#25d366;
+  --cinza:#f4f4f4;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:var(--cinza);color:#333}
+
+/* HEADER */
+header{
+  background:#fff;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+header h1{color:var(--azul);font-size:1.1rem}
+header a{
+  background:var(--azul);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(11,42,74,.85),rgba(11,42,74,.85)),
+  url("https://res.cloudinary.com/dny3p8nig/image/upload/Snow_White_toqiin") center/cover;
+  color:#fff;
+  padding:70px 20px;
+  text-align:center;
+}
+.hero h2{font-size:2rem;margin-bottom:8px}
+.hero p{font-size:1.05rem}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+/* BLOCO */
+.bloco{
+  background:#fff;
+  border-radius:12px;
+  padding:30px;
+  margin-bottom:30px;
+  box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+.bloco h3{
+  color:var(--azul);
+  margin-bottom:15px;
+}
+
+/* LISTA */
+.lista{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:10px;
+}
+.lista li{
+  list-style:none;
+  padding-left:18px;
+  position:relative;
+}
+.lista li::before{
+  content:"✔";
+  color:var(--verde);
+  position:absolute;
+  left:0;
+}
+
+/* TABELA */
+.tabela{
+  width:100%;
+  border-collapse:collapse;
+}
+.tabela td{
+  padding:10px;
+  border-bottom:1px solid #ddd;
+}
+.tabela td:first-child{
+  font-weight:bold;
+  width:45%;
+}
+
+/* GALERIA */
+.galeria-img{
+  width:100%;
+  max-width:720px;
+  border-radius:12px;
+  margin:20px 0;
+}
+
+.cores{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.cores span{
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  cursor:pointer;
+  border:2px solid #ddd;
+}
+
+/* WHATSAPP */
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:var(--verde);
+  color:#fff;
+  padding:14px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>BYD Dahruj Ceasa</h1>
+  <a href="index.html">Voltar</a>
+</header>
+
+<section class="hero">
+  <h2>BYD Tan</h2>
+  <p>SUV elétrico de 7 lugares, potência e sofisticação</p>
+</section>
+
+<section class="container">
+
+  <!-- GALERIA DE CORES -->
+  <div class="bloco" style="text-align:center">
+    <h3>Galeria de Cores</h3>
+
+    <img id="tanGaleria"
+      src="https://res.cloudinary.com/dny3p8nig/image/upload/Snow_White_toqiin"
+      alt="BYD Tan Snow White"
+      class="galeria-img">
+
+    <div class="cores">
+      <span title="Snow White" style="background:#fff"
+        onclick="trocarTan('https://res.cloudinary.com/dny3p8nig/image/upload/Snow_White_toqiin','Snow White')"></span>
+
+      <span title="Silver Sand Black" style="background:#444"
+        onclick="trocarTan('https://res.cloudinary.com/dny3p8nig/image/upload/Silver_Sand_Black_vhmun5','Silver Sand Black')"></span>
+
+      <span title="Mountain Grey" style="background:#8a8a8a"
+        onclick="trocarTan('https://res.cloudinary.com/dny3p8nig/image/upload/Mountain_Grey_uavbyp','Mountain Grey')"></span>
+    </div>
+  </div>
+
+  <!-- ITENS DE SÉRIE -->
+  <div class="bloco">
+    <h3>Itens de Série</h3>
+    <ul class="lista">
+      <li>Direção elétrica assistida por coluna (D-EPS)</li>
+      <li>Coluna de direção telescópica ajustável com 4 vias elétricas</li>
+      <li>Pinças de freio Brembo</li>
+      <li>Kit de reparo</li>
+      <li>Porta de carregamento CCS Tipo 2</li>
+    </ul>
+  </div>
+
+  <!-- DIMENSÕES -->
+  <div class="bloco">
+    <h3>Dimensões</h3>
+    <table class="tabela">
+      <tr><td>Comprimento</td><td>4.970 mm</td></tr>
+      <tr><td>Largura</td><td>1.955 mm</td></tr>
+      <tr><td>Altura</td><td>1.745 mm</td></tr>
+      <tr><td>Distância entre-eixos</td><td>2.820 mm</td></tr>
+      <tr><td>Porta-malas</td><td>235 / 940 / 1.655 L</td></tr>
+      <tr><td>Ocupantes</td><td>7</td></tr>
+      <tr><td>Peso bruto total</td><td>3.204 kg</td></tr>
+    </table>
+  </div>
+
+  <!-- CHASSI -->
+  <div class="bloco">
+    <h3>Chassi / Suspensão</h3>
+    <table class="tabela">
+      <tr><td>Suspensão dianteira</td><td>McPherson + suspensão eletrônica DiSus-C</td></tr>
+      <tr><td>Suspensão traseira</td><td>Multi-link + suspensão eletrônica DiSus-C</td></tr>
+      <tr><td>Pneus dianteiros</td><td>265/40 R22</td></tr>
+      <tr><td>Pneus traseiros</td><td>265/40 R22</td></tr>
+      <tr><td>Freios dianteiros</td><td>Discos ventilados</td></tr>
+      <tr><td>Freios traseiros</td><td>Discos ventilados</td></tr>
+    </table>
+  </div>
+
+  <!-- MOTOR -->
+  <div class="bloco">
+    <h3>Motor Elétrico</h3>
+    <table class="tabela">
+      <tr><td>Potência</td><td>380 cv</td></tr>
+      <tr><td>Torque</td><td>71,4 kgfm</td></tr>
+      <tr><td>Bateria</td><td>108,8 kWh</td></tr>
+      <tr><td>Autonomia elétrica</td><td>530 km</td></tr>
+      <tr><td>0–100 km/h</td><td>4,9 s</td></tr>
+      <tr><td>Velocidade máxima</td><td>190 km/h</td></tr>
+    </table>
+  </div>
+
+</section>
+
+<a class="whatsapp-float"
+   onclick="falarWhats('BYD Tan')">
+  WhatsApp
+</a>
+
+<script>
+function trocarTan(img, cor){
+  const foto = document.getElementById("tanGaleria");
+  foto.src = img;
+  foto.alt = "BYD Tan " + cor;
+}
+
+function falarWhats(modelo){
+  const telefone = "5511947377291";
+  const mensagem = `Olá! Vi o ${modelo} no catálogo do site e gostaria de saber mais sobre as condições de financiamento. Pode me ajudar?`;
+  const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
