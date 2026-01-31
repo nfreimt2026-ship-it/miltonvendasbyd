@@ -25,7 +25,7 @@ header{
   align-items:center;
   box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
-header img{height:38px}
+header img{height:38px;cursor:pointer}
 header a{
   background:var(--azul);
   color:#fff;
@@ -38,7 +38,7 @@ header a{
 /* HERO */
 .hero{
   background:linear-gradient(rgba(11,42,74,.85),rgba(11,42,74,.85)),
-  url("https://res.cloudinary.com/dny3p8nig/image/upload/vitrine_placeholder") center/cover;
+  url("https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_zh5seu") center/cover;
   color:#fff;
   padding:70px 20px;
   text-align:center;
@@ -98,6 +98,27 @@ header a{
   width:45%;
 }
 
+/* GALERIA */
+.galeria-img{
+  width:100%;
+  max-width:720px;
+  border-radius:12px;
+  margin:20px 0;
+}
+
+.cores{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+}
+.cores span{
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  cursor:pointer;
+  border:2px solid #ddd;
+}
+
 /* WHATSAPP FLOAT */
 .whatsapp-float{
   position:fixed;
@@ -124,8 +145,10 @@ header a{
 <body>
 
 <header>
-  <img src="https://res.cloudinary.com/dny3p8nig/image/upload/logo-byd_sig5ob" alt="BYD">
-  <a href="catalogo.html">Voltar</a>
+  <img src="https://res.cloudinary.com/dny3p8nig/image/upload/logo-byd_sig5ob"
+       alt="BYD Dahruj Ceasa"
+       onclick="location.href='catalogobyd.html'">
+  <a href="catalogobyd.html">Voltar</a>
 </header>
 
 <section class="hero">
@@ -135,15 +158,39 @@ header a{
 
 <section class="container">
 
+  <!-- GALERIA DE CORES -->
+  <div class="bloco" style="text-align:center">
+    <h3>Galeria de Cores</h3>
+
+    <img id="sharkImg"
+      src="https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_zh5seu"
+      alt="BYD Shark GS Skiing White"
+      class="galeria-img">
+
+    <div class="cores">
+      <span title="Skiing White"
+        style="background:#a9a9a9"
+        onclick="trocarShark('https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_zh5seu','Skiing White')"></span>
+
+      <span title="Surfing Blue"
+        style="background:#2c7bd1"
+        onclick="trocarShark('https://res.cloudinary.com/dny3p8nig/image/upload/Surfing_Blue_izzwu5','Surfing Blue')"></span>
+
+      <span title="Time Grey"
+        style="background:#91958c"
+        onclick="trocarShark('https://res.cloudinary.com/dny3p8nig/image/upload/Time_Grey_xcpl1x','Time Grey')"></span>
+    </div>
+  </div>
+
   <!-- ITENS -->
   <div class="bloco">
     <h3>Itens de Série</h3>
     <ul class="lista">
       <li>Antena tipo Shark</li>
       <li>Faróis dianteiros de LED</li>
-      <li>Luz central dianteira tipo contínua</li>
+      <li>Luz central dianteira contínua</li>
       <li>Faróis de neblina traseiros</li>
-      <li>Ajuste manual da altura do farol</li>
+      <li>Ajuste manual de altura dos faróis</li>
     </ul>
   </div>
 
@@ -184,15 +231,6 @@ header a{
     </table>
   </div>
 
-  <!-- MOTOR ELÉTRICO -->
-  <div class="bloco">
-    <h3>Motor Elétrico</h3>
-    <table class="tabela">
-      <tr><td>Bateria</td><td>29,6 kWh</td></tr>
-      <tr><td>Autonomia elétrica</td><td>57 km</td></tr>
-    </table>
-  </div>
-
 </section>
 
 <!-- WHATSAPP -->
@@ -202,7 +240,13 @@ header a{
        class="whatsapp-icon">
 </a>
 
+
 <script>
+function trocarShark(img, cor){
+  document.getElementById("sharkImg").src = img;
+  document.getElementById("sharkImg").alt = "BYD Shark GS " + cor;
+}
+
 function falarWhats(modelo){
   const telefone = "5511947377291";
   const mensagem =
