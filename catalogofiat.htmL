@@ -3,89 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catálogo BYD | Dahruj Ceasa</title>
+<title>Catálogo FIAT | Dahruj Ceasa</title>
 
 <style>
 :root{
-  --azul:#0b2a4a;
+  --vermelho:#c40000;
   --verde:#25d366;
+  --cinza:#f4f4f4;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:#f4f4f4;color:#333}
+body{background:var(--cinza);color:#333}
 
 /* HEADER */
 header{
   background:#fff;
-  padding:14px 25px;
+  padding:15px 25px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
-header img{height:38px}
-header a{
-  background:var(--azul);
+.logo-fiat{
+  height:38px;
+  cursor:pointer;
+}
+.cta-topo{
+  background:var(--vermelho);
   color:#fff;
-  padding:9px 16px;
+  padding:10px 16px;
   border-radius:6px;
   text-decoration:none;
   font-weight:bold;
 }
 
-/* TÍTULO */
-.titulo{
+/* BOTÃO VOLTAR */
+.voltar-container{
   max-width:1200px;
-  margin:25px auto 10px;
+  margin:20px auto 0;
   padding:0 20px;
 }
-.titulo h2{
-  color:var(--azul);
-  font-size:1.4rem;
+.btn-voltar{
+  display:inline-block;
+  background:var(--vermelho);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-/* CARROSSEL */
-.carrossel{
-  max-width:1200px;
-  margin:0 auto 35px;
-  padding:0 20px;
-  display:flex;
-  gap:16px;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
+/* HERO */
+.hero{
+  background:var(--vermelho);
+  color:#fff;
+  padding:30px 20px;
+  text-align:center;
 }
-.carrossel::-webkit-scrollbar{display:none}
+.hero h2{font-size:1.5rem;margin-bottom:6px}
+
+/* GRID */
+.catalogo{
+  max-width:1200px;
+  margin:auto;
+  padding:30px 20px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:22px;
+}
+@media(min-width:768px){
+  .catalogo{grid-template-columns:repeat(3,1fr)}
+}
 
 /* CARD */
 .card{
-  min-width:190px;
   background:#fff;
-  border-radius:10px;
-  box-shadow:0 4px 10px rgba(0,0,0,.12);
-  scroll-snap-align:start;
-  text-align:center;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+  transition:.3s;
 }
+.card:hover{transform:translateY(-4px)}
 .card img{
   width:100%;
-  height:115px;
+  height:170px;
   object-fit:cover;
-  border-radius:10px 10px 0 0;
 }
-.card h3{
-  font-size:.9rem;
-  padding:8px 6px 4px;
+.card-body{
+  padding:14px;
+  text-align:center;
 }
-.card a{
+.card-body h3{
+  font-size:1rem;
+  color:var(--vermelho);
+  margin-bottom:12px;
+}
+.btn{
   display:block;
-  margin:8px;
-  padding:7px;
   background:var(--verde);
   color:#fff;
-  text-decoration:none;
+  padding:11px;
   border-radius:6px;
-  font-size:.8rem;
+  text-decoration:none;
   font-weight:bold;
-  cursor:pointer;
+  font-size:.9rem;
 }
 
 /* WHATSAPP FLOAT */
@@ -101,7 +122,6 @@ header a{
   align-items:center;
   justify-content:center;
   box-shadow:0 4px 12px rgba(0,0,0,.25);
-  cursor:pointer;
   z-index:999;
 }
 .whatsapp-icon{
@@ -114,70 +134,41 @@ header a{
 <body>
 
 <header>
-  <img src="https://res.cloudinary.com/dny3p8nig/image/upload/logo-byd_sig5ob" alt="BYD">
-  <a href="index.html">Home</a>
+  <a href="index.html">
+    <img src="https://res.cloudinary.com/dny3p8nig/image/upload/logo-fiat_cgqwx0"
+         alt="FIAT Dahruj Ceasa"
+         class="logo-fiat">
+  </a>
+  <a class="cta-topo" onclick="falarWhats('Catálogo FIAT')">Falar com Consultor</a>
 </header>
 
-<!-- ================= ELÉTRICOS ================= -->
-<div class="titulo">
-  <h2>Elétricos</h2>
+<div class="voltar-container">
+  <a href="index.html" class="btn-voltar">← Voltar para Home</a>
 </div>
 
-<section class="carrossel">
+<section class="hero">
+  <h2>Catálogo FIAT</h2>
+  <p>Veículos novos e seminovos com procedência garantida</p>
+</section>
 
+<section class="catalogo">
+
+  <!-- MODELO EXEMPLO -->
   <div class="card">
-    <a href="dolphin.html">
-      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/queijo_yellow_xbrl6o" alt="BYD Dolphin">
+    <a href="#">
+      <img src="https://via.placeholder.com/600x400?text=FIAT+Modelo">
     </a>
-    <h3>BYD Dolphin</h3>
-    <a onclick="falarWhats('BYD Dolphin')">Tenho Interesse</a>
+    <div class="card-body">
+      <h3>FIAT Modelo</h3>
+      <a class="btn" onclick="falarWhats('FIAT Modelo')">Tenho Interesse</a>
+    </div>
   </div>
 
-  <div class="card">
-    <a href="dolphin-mini.html">
-      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Glacier_Blue_iba9aj" alt="Dolphin Mini">
-    </a>
-    <h3>Dolphin Mini 5 Lugares</h3>
-    <a onclick="falarWhats('BYD Dolphin Mini 5 Lugares')">Tenho Interesse</a>
-  </div>
-
-  <div class="card">
-    <a href="dolphin-plus.html">
-      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/black_hltyh8" alt="Dolphin Plus">
-    </a>
-    <h3>Dolphin Plus</h3>
-    <a onclick="falarWhats('BYD Dolphin Plus')">Tenho Interesse</a>
-  </div>
-
-  <div class="card">
-    <a href="yuan-plus.html">
-      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/Skiing_White_zh5seu" alt="Yuan Plus">
-    </a>
-    <h3>Yuan Plus</h3>
-    <a onclick="falarWhats('BYD Yuan Plus')">Tenho Interesse</a>
-  </div>
+  <!-- DUPLIQUE OS CARDS ABAIXO PARA NOVOS MODELOS -->
 
 </section>
 
-<!-- ================= HÍBRIDOS ================= -->
-<div class="titulo">
-  <h2>Híbridos</h2>
-</div>
-
-<section class="carrossel">
-
-  <div class="card">
-    <a href="shark-gs.html">
-      <img src="https://res.cloudinary.com/dny3p8nig/image/upload/vitrine_placeholder" alt="BYD Shark GS">
-    </a>
-    <h3>BYD Shark GS</h3>
-    <a onclick="falarWhats('BYD Shark GS')">Tenho Interesse</a>
-  </div>
-
-</section>
-
-<!-- WHATSAPP -->
-<a class="whatsapp-float" onclick="falarWhats('Catálogo BYD')">
+<a class="whatsapp-float" onclick="falarWhats('Catálogo FIAT')">
   <img src="https://res.cloudinary.com/dny3p8nig/image/upload/whatsapp_krknit"
        alt="WhatsApp"
        class="whatsapp-icon">
